@@ -167,11 +167,6 @@ cli.exe serialize add --x 7693 --y 14399 --z 2260.6999999999971 --under-z 42401.
 cli.exe export --output output/recreate1.bin # this command used alone doesnt work well
 ```
 
-# Issues
-
-It remains a float issue for the UnderstageZ a value ...
-It created an extra empty line at the end of the xml.bin file 
-
 # Example of GIUS
 
 | Stage X [um] | Stage Y [um] | Lens Z [um] | Stage Z [um] | Auto Focus | Lens Magnification |
@@ -204,14 +199,6 @@ cli.exe serialize add --x 0 --y -20000 --z 6900  --under-z 47000 --lensmagnifica
 # cli.exe serialize build
 cli.exe serialize export --output output/giuseppe.bin # this command used alone doesnt work well
 ```
-
-## others
-
-- [float issue](https://stackoverflow.com/questions/12956333/printing-numpy-float64-with-full-precision)
-
-
-- [python in usb key](https://share.google/aimode/x593ZSA29ZnmUOAYF)
-
 # Work with xmlstarlet a professional xml cli editor
 
 ```bash
