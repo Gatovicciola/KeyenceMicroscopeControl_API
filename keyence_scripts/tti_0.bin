@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VHX version="1.4.23.17">
+  <TeachingTaskInfo version="1">
+    <Tasks>
+      <Task id="d744af95-6052-4ecf-95f5-b0b709b60232">
+        <PositionInfo>
+          <XyStagePosition>-566, 2033</XyStagePosition>
+          <ZStagePosition>6853.6999999999971</ZStagePosition>
+          <UnderZStagePosition>46934.9795</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X100</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+      <Task id="76a17c58-6ce4-4593-a4c9-2d43208402b2">
+        <PositionInfo>
+          <XyStagePosition>43392, 2434</XyStagePosition>
+          <ZStagePosition>6824.6999999999971</ZStagePosition>
+          <UnderZStagePosition>46934.9795</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X100</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+      <Task id="09f86ea0-0bb7-41de-93e4-d0b41bc6b68f">
+        <PositionInfo>
+          <XyStagePosition>-44522, 1601</XyStagePosition>
+          <ZStagePosition>6824.6999999999971</ZStagePosition>
+          <UnderZStagePosition>46934.9795</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X100</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+      <Task id="df5b5216-3584-4edc-85c5-877ddfa1f922">
+        <PositionInfo>
+          <XyStagePosition>-145, -41976</XyStagePosition>
+          <ZStagePosition>6824.6999999999971</ZStagePosition>
+          <UnderZStagePosition>46934.9795</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X100</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+      <Task id="dd787a42-0495-47b0-83ae-365aa5b8cfb0">
+        <PositionInfo>
+          <XyStagePosition>-996, 46017</XyStagePosition>
+          <ZStagePosition>6808.6999999999971</ZStagePosition>
+          <UnderZStagePosition>46934.9795</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X100</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+    </Tasks>
+    <StageInfo>
+      <XyStageType>Stroke100</XyStageType>
+      <ZStageType>HighSpeedZ</ZStageType>
+      <UnderZStageType>VHX7000</UnderZStageType>
+      <IgnoreZPosition>False</IgnoreZPosition>
+    </StageInfo>
+    <LensEvacuateSetting>
+      <Enabled>False</Enabled>
+      <UpperZ>0</UpperZ>
+      <UnderZ>0</UnderZ>
+    </LensEvacuateSetting>
+  </TeachingTaskInfo>
+</VHX>

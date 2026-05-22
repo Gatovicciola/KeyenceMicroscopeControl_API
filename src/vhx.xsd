@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ========================= -->
+  <!-- Reusable Types (DRY)      -->
+  <!-- ========================= -->
+
+  <!-- Keyence Boolean (non-standard) -->
+  <xs:simpleType name="KeyenceBoolean">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="True"/>
+      <xs:enumeration value="False"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Optional: Lens magnification constraint -->
+  <xs:simpleType name="LensMagnificationType">
+    <xs:restriction base="xs:string">
+      <!--first lens magnification -->
+      <xs:enumeration value="X20"/>
+      <xs:enumeration value="X30"/>
+      <xs:enumeration value="X40"/>
+      <xs:enumeration value="X50"/>
+      <xs:enumeration value="X80"/>
+      <!--second lens magnification -->
+      <xs:enumeration value="X100"/>
+      <xs:enumeration value="X150"/>
+      <xs:enumeration value="X200"/>
+      <xs:enumeration value="X300"/>
+      <xs:enumeration value="X400"/>
+      <!--third lens magnification -->
+      <xs:enumeration value="X500"/>
+      <xs:enumeration value="X700"/>
+      <xs:enumeration value="X1000"/>
+      <xs:enumeration value="X1500"/>
+      <xs:enumeration value="X2000"/>
+      <xs:enumeration value="X2500"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Optional: Image Type constraint -->
+  <xs:simpleType name="ImageTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Standard"/>
+      <xs:enumeration value="Particular"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Optional: Range Type constraint -->
+  <xs:simpleType name="RangeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Middle"/>
+      <xs:enumeration value="Full"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Optional: Upper Type constraint -->
+  <xs:simpleType name="UpperType">
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Optional: Lower Type constraint -->
+  <xs:simpleType name="LowerType">
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Root عنصر -->
+  <xs:element name="VHX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TeachingTaskInfo">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- Tasks -->
+              <xs:element name="Tasks">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Task" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <!-- PositionInfo -->
+                          <xs:element name="PositionInfo">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="XyStagePosition" type="xs:string"/>
+                                <xs:element name="ZStagePosition" type="xs:double"/>
+                                <xs:element name="UnderZStagePosition" type="xs:double"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                          <!-- ImageParameter -->
+                          <xs:element name="ImageParameter">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ImageType" type="ImageTypeType"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                          <!-- DepthComposeInfo -->
+                          <xs:element name="DepthComposeInfo">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Enabled" type="KeyenceBoolean"/>
+                                <xs:element name="Upper" type="UpperType"/>
+                                <xs:element name="Lower" type="LowerType"/>
+                                <xs:element name="Count" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Pitch" type="xs:double"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                          <!-- AutoFocusInfo -->
+                          <xs:element name="AutoFocusInfo">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Enabled" type="KeyenceBoolean"/>
+                                <xs:element name="Range" type="RangeType"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                          <!-- LensMagnification -->
+                          <xs:element name="LensMagnification">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="LensMagnificationId" type="LensMagnificationType"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                        </xs:sequence>
+
+                        <!-- Task attribute -->
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- StageInfo -->
+              <xs:element name="StageInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="XyStageType" type="xs:string"/>
+                    <xs:element name="ZStageType" type="xs:string"/>
+                    <xs:element name="UnderZStageType" type="xs:string"/>
+                    <xs:element name="IgnoreZPosition" type="KeyenceBoolean"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- LensEvacuateSetting -->
+              <xs:element name="LensEvacuateSetting">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Enabled" type="KeyenceBoolean"/>
+                    <xs:element name="UpperZ" type="xs:double"/>
+                    <xs:element name="UnderZ" type="xs:double"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+
+            <!-- Attribute -->
+            <xs:attribute name="version" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+
+      <!-- Root attribute -->
+      <xs:attribute name="version" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VHX version="1.4.23.17">
+  <TeachingTaskInfo version="1">
+    <Tasks>
+      <Task id="6bd9b546-7af3-4459-ac88-018a609cc172">
+        <PositionInfo>
+          <XyStagePosition>5482, 8647</XyStagePosition>
+          <ZStagePosition>2267.8999999999942</ZStagePosition>
+          <UnderZStagePosition>42401.284999999996</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X1000</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+      <Task id="26b6ee8a-8f20-4a66-ba1d-58e7c67ab138">
+        <PositionInfo>
+          <XyStagePosition>7693, 14399</XyStagePosition>
+          <ZStagePosition>2260.6999999999971</ZStagePosition>
+          <UnderZStagePosition>42401.284999999996</UnderZStagePosition>
+        </PositionInfo>
+        <ImageParameter>
+          <ImageType>Standard</ImageType>
+        </ImageParameter>
+        <DepthComposeInfo>
+          <Enabled>False</Enabled>
+          <Upper>424.5</Upper>
+          <Lower>423.09999999999854</Lower>
+          <Count></Count>
+          <Pitch>0.1</Pitch>
+        </DepthComposeInfo>
+        <AutoFocusInfo>
+          <Enabled>False</Enabled>
+          <Range>Middle</Range>
+        </AutoFocusInfo>
+        <LensMagnification>
+          <LensMagnificationId>X1500</LensMagnificationId>
+        </LensMagnification>
+      </Task>
+    </Tasks>
+    <StageInfo>
+      <XyStageType>Stroke100</XyStageType>
+      <ZStageType>HighSpeedZ</ZStageType>
+      <UnderZStageType>VHX7000</UnderZStageType>
+      <IgnoreZPosition>False</IgnoreZPosition>
+    </StageInfo>
+    <LensEvacuateSetting>
+      <Enabled>False</Enabled>
+      <UpperZ>0</UpperZ>
+      <UnderZ>0</UnderZ>
+    </LensEvacuateSetting>
+  </TeachingTaskInfo>
+</VHX>
