@@ -5,11 +5,40 @@ To be able to create automatic microscope routines, the keyence microscope is cr
 
 This information make us able to edit routines via another language (python for the beginning) with selected library ([lxml](https://lxml.de/capi.html) for management, the parsing and verification of xml) and [pydantic-xml](https://pydantic-xml.readthedocs.io/en/latest/) to make a dynamic xml schema (XSD) customisable to validate the correct structure of each generated xml.
 
+## Current structure of the project API
+```bash
+KeyenceMicroscopeControl_API
+├── readme.md
+├── cli.exe
+├── src
+│   ├── vhx.xsd
+│   ├── dummy.jpg
+│   └── tasks.csv
+```
 # Description of "src" repertory:
 
 The software is based on Pydantic xml module and [lxml](https://lxml.de/capi.html).
 Thus pydantic is used to make an pydantic schema which is the equivalent of xsd file in xml world.
 
+## Structure of the project
+```bash
+KeyenceMicroscopeControl
+├── readme.md
+├── cli.py
+├── src
+│   ├── csv_reader.py
+│   ├── deserialization.py
+│   ├── dynamic_xsd.py
+│   ├── edit_xml.py
+│   ├── serialization_typer.py
+│   ├── serialization_xml.py
+│   ├── validation_xml.py
+│   ├── vhx.xsd
+│   ├── dummy.jpg
+│   └── tasks.csv
+└── tests
+    └── [...]
+```
 pydantic-schema: dynamic_xsd.py
 
 from the schema is built the following methods:
