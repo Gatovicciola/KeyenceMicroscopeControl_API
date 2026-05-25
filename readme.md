@@ -9,7 +9,7 @@ This information make us able to edit routines via another language (python for 
 ```bash
 KeyenceMicroscopeControl_API
 ├── readme.md
-├── cli.exe
+├── ./cli.bin
 ├── src
 │   ├── vhx.xsd
 │   ├── dummy.jpg
@@ -72,7 +72,7 @@ Then, the other python file are dedicated methods:
 
 ## sum-up
 
-all the functionalities of the **KeyenceMicroscopeControl** software are concentrated in the "cli.exe" file
+all the functionalities of the **KeyenceMicroscopeControl** software are concentrated in the "./cli.bin" file
 which is a cli tool built on "[typer](https://typer.tiangolo.com/)" module.
 
 # Commands
@@ -82,19 +82,19 @@ which is a cli tool built on "[typer](https://typer.tiangolo.com/)" module.
 - edit a csv file in "src/tasks.csv" and save the modifications
 - open a command terminal in the "xmlParser" repertory and run the command:
 ```bash
-cli.exe serialize csv --output "output3/tti.bin"
+./cli.bin serialize csv --output "output3/tti.bin"
 ```
 ```bash
-cli.exe serialize csv --output "E:/dummy_bin/tti.bin"
+./cli.bin serialize csv --output "E:/dummy_bin/tti.bin"
 ```
 ```bash
-cli.exe serialize csv
+./cli.bin serialize csv
 ```
 
 ## 1. Deserialization
 
 ```bash
->>> cli.exe show .\keyence_scripts\tti_0.bin
+>>> ./cli.bin show .\keyence_scripts\tti_0.bin
 
 Task 0
 ID: d744af95-6052-4ecf-95f5-b0b709b60232
@@ -128,7 +128,7 @@ Lens: X100
 ```
 
 ```bash
->>> cli.exe show .\keyence_scripts\tti_0.bin
+>>> ./cli.bin show .\keyence_scripts\tti_0.bin
 
 Task 0
 ID: 6bd9b546-7af3-4459-ac88-018a609cc172
@@ -147,24 +147,24 @@ Lens: X1500
 ## 2. Serialization
 
 ```bash
-cli.exe serialize clear # clear all task
-cli.exe serialize add # task 0
-cli.exe serialize add --x 43392 --y 2434 --z 6824.6999999999971  # task 1
-cli.exe serialize add --x -44522 --y 1601 --z 6824.6999999999971  # task 2
-cli.exe serialize add --x -145 --y -41976 --z 6824.6999999999971  # task 3
-cli.exe serialize add --x -996 --y 46017 --z 6808.6999999999971  # task 4
+./cli.bin serialize clear # clear all task
+./cli.bin serialize add # task 0
+./cli.bin serialize add --x 43392 --y 2434 --z 6824.6999999999971  # task 1
+./cli.bin serialize add --x -44522 --y 1601 --z 6824.6999999999971  # task 2
+./cli.bin serialize add --x -145 --y -41976 --z 6824.6999999999971  # task 3
+./cli.bin serialize add --x -996 --y 46017 --z 6808.6999999999971  # task 4
 
-# cli.exe serialize build
-cli.exe export --output output/recreate0.bin # this command used alone doesnt work well
+# ./cli.bin serialize build
+./cli.bin export --output output/recreate0.bin # this command used alone doesnt work well
 ```
 
 ```bash
-cli.exe serialize clear # clear all task
-cli.exe serialize add --x 5482 --y 8647 --z 2267.8999999999942 --under-z 42401.284999999996 --lensmagnification "X1000" # task 0
-cli.exe serialize add --x 7693 --y 14399 --z 2260.6999999999971 --under-z 42401.284999999996 --lensmagnification "X1500" # task 1
+./cli.bin serialize clear # clear all task
+./cli.bin serialize add --x 5482 --y 8647 --z 2267.8999999999942 --under-z 42401.284999999996 --lensmagnification "X1000" # task 0
+./cli.bin serialize add --x 7693 --y 14399 --z 2260.6999999999971 --under-z 42401.284999999996 --lensmagnification "X1500" # task 1
 
-# cli.exe serialize build
-cli.exe export --output output/recreate1.bin # this command used alone doesnt work well
+# ./cli.bin serialize build
+./cli.bin export --output output/recreate1.bin # this command used alone doesnt work well
 ```
 
 # Example of GIUS
@@ -180,24 +180,24 @@ cli.exe export --output output/recreate1.bin # this command used alone doesnt wo
 ## without autofocus
 
 ```bash
-cli.exe serialize clear # clear all task
-cli.exe serialize add --x 0 --y 0 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 0
-cli.exe serialize add --x 20000 --y 0 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 1
-cli.exe serialize add --x -20000 --y 0 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 2
-cli.exe serialize add --x 0 --y 20000 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 3
-cli.exe serialize add --x 0 --y -20000 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 4
+./cli.bin serialize clear # clear all task
+./cli.bin serialize add --x 0 --y 0 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 0
+./cli.bin serialize add --x 20000 --y 0 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 1
+./cli.bin serialize add --x -20000 --y 0 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 2
+./cli.bin serialize add --x 0 --y 20000 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 3
+./cli.bin serialize add --x 0 --y -20000 --z 6900  --under-z 47000 --lensmagnification "X100" --no-enableautofocus # task 4
 
-# cli.exe serialize build
-cli.exe serialize export --output output/giuseppe.bin # this command used alone doesnt work well
+# ./cli.bin serialize build
+./cli.bin serialize export --output output/giuseppe.bin # this command used alone doesnt work well
 ```
 
 ## with autofocus example
 ```bash
-cli.exe serialize clear # clear all task
-cli.exe serialize add --x 0 --y -20000 --z 6900  --under-z 47000 --lensmagnification "X100" --enableautofocus # task 4
+./cli.bin serialize clear # clear all task
+./cli.bin serialize add --x 0 --y -20000 --z 6900  --under-z 47000 --lensmagnification "X100" --enableautofocus # task 4
 
-# cli.exe serialize build
-cli.exe serialize export --output output/giuseppe.bin # this command used alone doesnt work well
+# ./cli.bin serialize build
+./cli.bin serialize export --output output/giuseppe.bin # this command used alone doesnt work well
 ```
 # Work with xmlstarlet a professional xml cli editor
 
